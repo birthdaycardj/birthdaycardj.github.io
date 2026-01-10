@@ -8,7 +8,7 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Birthday Card">
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <title>🎂 Birthday Card</title>
+   <title>🎂 Birthday Card</title>
     <style>
         * {
             margin: 0;
@@ -211,15 +211,15 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
         .cake-container {
             position: relative;
             margin: 30px auto;
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             z-index: 1;
         }
 
         /* Cake */
         .cake {
             position: absolute;
-            bottom: 0;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -305,22 +305,24 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
         .cherry:nth-child(2) { left: 50%; transform: translateX(-50%); }
         .cherry:nth-child(3) { right: 20px; }
 
-        /* Candles */
+        /* Candles - Now positioned on top of the cake */
         .candles-container {
             position: absolute;
-            top: -80px;
+            top: -5px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 15px;
+            gap: 12px;
             justify-content: center;
+            z-index: 2;
         }
 
         .candle {
             position: relative;
-            width: 12px;
-            height: 50px;
+            width: 10px;
+            height: 40px;
             border-radius: 3px 3px 0 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .candle:nth-child(1) { background: linear-gradient(180deg, #ff6b6b, #ee5a5a); }
@@ -335,8 +337,8 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
             top: -5px;
             left: 50%;
             transform: translateX(-50%);
-            width: 4px;
-            height: 8px;
+            width: 3px;
+            height: 7px;
             background: #333;
             border-radius: 2px;
         }
@@ -344,15 +346,15 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
         /* Flame */
         .flame {
             position: absolute;
-            top: -35px;
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
-            width: 14px;
-            height: 25px;
+            width: 12px;
+            height: 20px;
             background: linear-gradient(180deg, #fff7ad, #ffd93d, #ff9500, #ff6b00);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             animation: flicker 0.3s ease-in-out infinite alternate;
-            box-shadow: 0 0 20px #ffd93d, 0 0 40px #ff9500, 0 0 60px #ff6b00;
+            box-shadow: 0 0 15px #ffd93d, 0 0 30px #ff9500, 0 0 45px #ff6b00;
         }
 
         .flame.blown-out {
@@ -382,11 +384,11 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
         /* Smoke */
         .smoke {
             position: absolute;
-            top: -45px;
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             background: rgba(150, 150, 150, 0.6);
             border-radius: 50%;
             opacity: 0;
@@ -410,7 +412,7 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
         /* Plate */
         .plate {
             position: absolute;
-            bottom: -15px;
+            bottom: 5px;
             left: 50%;
             transform: translateX(-50%);
             width: 200px;
@@ -652,8 +654,8 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
             }
 
             .cake-container {
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
                 margin: 20px auto;
             }
 
@@ -662,19 +664,18 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
             .cake-layer-3 { width: 80px; height: 30px; }
 
             .candles-container {
-                top: -60px;
-                gap: 10px;
+                gap: 8px;
             }
 
             .candle {
                 width: 8px;
-                height: 35px;
+                height: 30px;
             }
 
             .flame {
                 width: 10px;
-                height: 18px;
-                top: -25px;
+                height: 16px;
+                top: -24px;
             }
 
             .title {
@@ -698,8 +699,8 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
             }
 
             .cake-container {
-                width: 160px;
-                height: 160px;
+                width: 180px;
+                height: 180px;
             }
 
             .cake-layer-1 { width: 130px; height: 40px; }
@@ -707,7 +708,12 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
             .cake-layer-3 { width: 80px; height: 30px; }
 
             .candles-container {
-                gap: 10px;
+                gap: 8px;
+            }
+
+            .candle {
+                width: 8px;
+                height: 32px;
             }
 
             .btn {
@@ -825,14 +831,11 @@ Copyright (c) 2025-2026 Yuliya Kolesnikova <0009-0000-6151-7415@orcid.org>
             </div>
 
             <div class="cake-container">
-                <div class="candles-container" id="candlesContainer">
-                    <!-- Candles will be generated dynamically -->
-                </div>
                 <div class="cake">
                     <div class="cake-layer cake-layer-3">
-                        <div class="cherry"></div>
-                        <div class="cherry"></div>
-                        <div class="cherry"></div>
+                        <div class="candles-container" id="candlesContainer">
+                            <!-- Candles will be generated dynamically -->
+                        </div>
                     </div>
                     <div class="cake-layer cake-layer-2"></div>
                     <div class="cake-layer cake-layer-1"></div>
